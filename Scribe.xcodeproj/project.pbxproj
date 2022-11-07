@@ -15,6 +15,10 @@
 		38BD214F22D592CA00C6795D /* GermanKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */; };
 		38BD215322D592CA00C6795D /* German.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38BD214C22D592CA00C6795D /* German.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		38DD94F122D6A40000FF8845 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD94F022D6A40000FF8845 /* Extensions.swift */; };
+		4572439D29197AA100EF621F /* InstructionsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4572439C29197AA100EF621F /* InstructionsMenuView.swift */; };
+		457243A229197CA600EF621F /* SwiftUIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457243A129197CA600EF621F /* SwiftUIViewExtensions.swift */; };
+		457243A629197DD600EF621F /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457243A529197DD500EF621F /* MenuItemView.swift */; };
+		457243A8291993DD00EF621F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457243A7291993DD00EF621F /* MainView.swift */; };
 		CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C528F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
 		CE1378C628F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */; };
@@ -498,6 +502,10 @@
 		38BD214E22D592CA00C6795D /* GermanKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GermanKeyboardViewController.swift; sourceTree = "<group>"; };
 		38BD215022D592CA00C6795D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38DD94F022D6A40000FF8845 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4572439C29197AA100EF621F /* InstructionsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsMenuView.swift; sourceTree = "<group>"; };
+		457243A129197CA600EF621F /* SwiftUIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewExtensions.swift; sourceTree = "<group>"; };
+		457243A529197DD500EF621F /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		457243A7291993DD00EF621F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CE1378C228F5D7AC00E1CBC2 /* ScribeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScribeColor.swift; sourceTree = "<group>"; };
 		CE1378C328F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ScribeColors.swift"; sourceTree = "<group>"; };
 		D101820F2728275B0032A82D /* nouns.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nouns.json; sourceTree = "<group>"; };
@@ -710,6 +718,8 @@
 		38BD213222D5907F00C6795D /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				457243A029197C9400EF621F /* Extensions */,
+				4572439B29197A8D00EF621F /* Menu */,
 				D1A2DCAF27AD378F0057A10D /* AppTexts */,
 				38BD213322D5907F00C6795D /* AppDelegate.swift */,
 				D17193C327AEAD7D0038660B /* AppStyling.swift */,
@@ -733,6 +743,24 @@
 				38BD215022D592CA00C6795D /* Info.plist */,
 			);
 			path = German;
+			sourceTree = "<group>";
+		};
+		4572439B29197A8D00EF621F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				457243A7291993DD00EF621F /* MainView.swift */,
+				4572439C29197AA100EF621F /* InstructionsMenuView.swift */,
+				457243A529197DD500EF621F /* MenuItemView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		457243A029197C9400EF621F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				457243A129197CA600EF621F /* SwiftUIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CE1378C128F5D7AC00E1CBC2 /* Colors */ = {
@@ -1420,6 +1448,7 @@
 				CE1378C428F5D7AC00E1CBC2 /* ScribeColor.swift in Sources */,
 				D171946527AF31770038660B /* Conjugate.swift in Sources */,
 				D171940827AECCE50038660B /* PTCommandVariables.swift in Sources */,
+				457243A629197DD600EF621F /* MenuItemView.swift in Sources */,
 				D111E9B227AFE79500746F92 /* Translate.swift in Sources */,
 				D171941827AECD070038660B /* ESCommandVariables.swift in Sources */,
 				D171940027AECCD10038660B /* DECommandVariables.swift in Sources */,
@@ -1437,9 +1466,11 @@
 				D111E9BA27AFE7B200746F92 /* Annotate.swift in Sources */,
 				CE1378CC28F5D7AC00E1CBC2 /* UIColor+ScribeColors.swift in Sources */,
 				D17193F027AECB350038660B /* SVInterfaceVariables.swift in Sources */,
+				457243A229197CA600EF621F /* SwiftUIViewExtensions.swift in Sources */,
 				38BD213422D5907F00C6795D /* AppDelegate.swift in Sources */,
 				D1F0367327AAE1B400CD7921 /* CommandVariables.swift in Sources */,
 				D17193E827AECAE60038660B /* ESInterfaceVariables.swift in Sources */,
+				457243A8291993DD00EF621F /* MainView.swift in Sources */,
 				D17193E027AECAA60038660B /* RUInterfaceVariables.swift in Sources */,
 				D1B81D5327BBBA360085FE5E /* ITInterfaceVariables.swift in Sources */,
 				D17193D827AECA450038660B /* PTInterfaceVariables.swift in Sources */,
@@ -1450,6 +1481,7 @@
 				D171942027AECD170038660B /* SVCommandVariables.swift in Sources */,
 				D1362A39274C106A00C00E48 /* ColorVariables.swift in Sources */,
 				D1A2DCB127AD37BD0057A10D /* ENAppText.swift in Sources */,
+				4572439D29197AA100EF621F /* InstructionsMenuView.swift in Sources */,
 				D171944927AEF7290038660B /* KeyboardKeys.swift in Sources */,
 				D1B071A027C6A1AA00FD7DBD /* KeyAltChars.swift in Sources */,
 				D17693DE28FC8D6B00DF0FBB /* FR-QWERTYInterfaceVariables.swift in Sources */,
